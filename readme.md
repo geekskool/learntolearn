@@ -4,12 +4,12 @@ The app enables users to learn HTML5 canvas tool using a console based tool whic
 A canvesque function to draw objects on Console/Popup.
 
 #Functionalities provided
-rect
-circle
-stroke
-line
-polygon
-fill color 
+1. rect()
+2. circle()
+3. stroke()
+4. line()
+5. polygon()
+6. fill() 
 and more 
 
 #Output
