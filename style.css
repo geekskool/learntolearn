@@ -1,0 +1,12 @@
+.container {
+	background-color: black; 
+	padding: 500px;
+}
+.style1 {
+	background-color: #fff;
+	border-top: 2px dashed red;
+}
+.mycode {
+	width:1810px;
+	height:300px;
+}
