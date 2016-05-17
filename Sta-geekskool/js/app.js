@@ -98,7 +98,7 @@ $("button").click(function() {
     }
     if (getCommand() === 'fillRect' && getArgs().length === 4) {
         var temp = getArgs();
-        ctx.clearRect(temp[0], temp[1], temp[2], temp[3]);
+        ctx.fillRect(temp[0], temp[1], temp[2], temp[3]);
     }
     if (getCommand() === 'pie' && getArgs().length === 5) {
 
