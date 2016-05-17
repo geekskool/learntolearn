@@ -39,6 +39,7 @@ Functionalities provided
 
 
 Output
+
 Corresponding to the user defined function with the arguments for dimensions and position, the drawing appears on the canvas frame.
 The main output window is divided into 2 parts- Console output and Text input. Below is the console, where the user provides input and the output appears above on the canvas. 
 
