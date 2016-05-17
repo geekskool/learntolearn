@@ -78,7 +78,7 @@ $("button").click(function() {
 
     if (getCommand() === 'rotate' && getArgs().length === 1) {
         var temp = getArgs();
-        ctx.rotate(temp[0]);
+        ctx.rotate(temp[0] * (Math.PI/180));
     }
     if (getCommand() === 'translate' && getArgs().length === 2) {
         var temp = getArgs();
