@@ -78,11 +78,11 @@ $("button").click(function() {
 
     if (getCommand() === 'rotate' && getArgs().length === 1) {
         var temp = getArgs();
-        ctx.rotate(temp[0]);        
+        ctx.rotate(temp[0]);
     }
     if (getCommand() === 'translate' && getArgs().length === 2) {
         var temp = getArgs();
-        ctx.translate(temp[0], temp[1]);        
+        ctx.translate(temp[0], temp[1]);
     }
     if (getCommand() === 'transform' && getArgs().length === 6) {
         var temp = getArgs();
@@ -90,24 +90,23 @@ $("button").click(function() {
     }
     if (getCommand() === 'scale' && getArgs().length === 2) {
         var temp = getArgs();
-        ctx.scale(temp[0], temp[1]);        
+        ctx.scale(temp[0], temp[1]);
     }
     if (getCommand() === 'clearRect' && getArgs().length === 4) {
-
-<<<<<<< HEAD
         var temp = getArgs();
         ctx.clearRect(temp[0], temp[1], temp[2], temp[3]);
     }
     if (getCommand() === 'fillRect' && getArgs().length === 4) {
-||||||| merged common ancestors
-=======
+        var temp = getArgs();
+        ctx.clearRect(temp[0], temp[1], temp[2], temp[3]);
+    }
     if (getCommand() === 'pie' && getArgs().length === 5) {
 
         var temp = getArgs();
         ctx.beginPath();
         ctx.moveTo(temp[0], temp[1]);
         ctx.arc(temp[0], temp[1], temp[2], temp[3], temp[4] * PI);
-        ctx.lineTo(temp[0],temp[1]);
+        ctx.lineTo(temp[0], temp[1]);
         // ctx.lineTo(temp[1],temp[]);
         ctx.stroke();
 
@@ -116,21 +115,13 @@ $("button").click(function() {
     if (getCommand() === 'text' && getArgs().length >= 3) {
         var temp = getArgs();
         var string = "";
-        for(var i = 2; i<temp.length;i++) {
-        	string += temp[i];
+        for (var i = 2; i < temp.length; i++) {
+            string += temp[i];
         }
         ctx.beginPath();
         ctx.font = "40px Arial";
-        ctx.fillText(""+string,temp[0],temp[1]);
+        ctx.fillText("" + string, temp[0], temp[1]);
         ctx.stroke();
 
-    }
-
-
-
->>>>>>> rahul
-
-        var temp = getArgs();
-        ctx.fillRect(temp[0], temp[1], temp[2], temp[3]);
     }
 });
