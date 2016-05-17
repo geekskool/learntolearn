@@ -1,7 +1,7 @@
-The app enables users to learn HTML5 canvas tool using a console based tool which uses REPL(Read-Eval-Print Loop) to enable the use of functions for using the canvas API.
+The app enables users to learn HTML5 canvas tool using a web based toolto enable the use of functions for using the canvas API.
 
 ##Input
-A canvesque function to draw objects on Console/Popup.
+Basic functions from Canvas API to draw and manipulate objects on screen 
 
 ##Functionalities provided
 1. rect()

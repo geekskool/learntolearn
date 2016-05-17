@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style>
+    body {
+        padding-top: 20px;
+    }
+    text {
+        width:10px;
+    }
+    
+    canvas {
+        border: 5px solid black;
+    }
+    </style>
+    <script type="application/javascript">
+    function draw() {
+        var canvas = document.getElementById("canvas");
+        if (canvas.getContext) {
+            var ctx = canvas.getContext("2d");
+            var input;
+
+            ctx.fillStyle = document.getElementById('StyleCode').value;
+            ctx.fillRect(document.getElementById("x").value, document.getElementById("y").value, document.getElementById("width").value, document.getElementById("height").value);
+
+            //ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+            //ctx.fillRect (30, 30, 55, 50);
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <form id="input">
+                    Enter code for style
+                    <input type="text-area" id='StyleCode' value=""> 
+                    <br>Draw a rectangle = fillrect(<input type="text" id='x'>,<input type="text" id='y'>,<input type="text" id='width'>,<input type="text" id='height'>)
+                    <input type="button" class="btn btn-info" id='submit' value='submit' onclick="draw()">
+                </form>
+            </div>
+            <div class="col-md-6">
+                <canvas id="canvas" height='600' width="600"></canvas>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

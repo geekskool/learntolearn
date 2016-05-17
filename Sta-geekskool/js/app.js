@@ -75,17 +75,30 @@ $("button").click(function() {
 
     }
 
-    if (getCommand() === 'line' && getArgs().length === 2) {
+    if (getCommand() === 'rotate' && getArgs().length === 1) {
         var temp = getArgs();
-        ctx.beginPath();
-        ctx.moveTo(0, 0);
-        ctx.lineTo(300, 150);
-        ctx.stroke();
-
+        ctx.rotate(temp[0]);        
     }
+    if (getCommand() === 'translate' && getArgs().length === 2) {
+        var temp = getArgs();
+        ctx.translate(temp[0], temp[1]);        
+    }
+    if (getCommand() === 'transform' && getArgs().length === 6) {
+        var temp = getArgs();
+        ctx.transform(temp[0], temp[1], temp[2], temp[3], temp[4], temp[5]);
+    }
+    if (getCommand() === 'scale' && getArgs().length === 2) {
+        var temp = getArgs();
+        ctx.scale(temp[0], temp[1]);        
+    }
+    if (getCommand() === 'clearRect' && getArgs().length === 4) {
 
+        var temp = getArgs();
+        ctx.clearRect(temp[0], temp[1], temp[2], temp[3]);
+    }
+    if (getCommand() === 'fillRect' && getArgs().length === 4) {
 
-
-
-
+        var temp = getArgs();
+        ctx.fillRect(temp[0], temp[1], temp[2], temp[3]);
+    }
 });
