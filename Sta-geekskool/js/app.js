@@ -5,6 +5,7 @@ var commandArr = [];
 var argsArr = [];
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
+var PI = 3.14;
 
 
 
@@ -59,7 +60,7 @@ $("button").click(function() {
 
         var temp = getArgs();
         ctx.beginPath();
-        ctx.arc(temp[0], temp[1], temp[2], temp[3], temp[4] * 3.14);
+        ctx.arc(temp[0], temp[1], temp[2], temp[3], temp[4] * PI);
         ctx.stroke();
 
     }
@@ -89,12 +90,30 @@ $("button").click(function() {
         var temp = getArgs();
         ctx.beginPath();
         ctx.moveTo(temp[0], temp[1]);
-        ctx.arc(temp[0], temp[1], temp[2], temp[3], temp[4] * 3.14);
+        ctx.arc(temp[0], temp[1], temp[2], temp[3], temp[4] * PI);
         ctx.lineTo(temp[0],temp[1]);
         // ctx.lineTo(temp[1],temp[]);
         ctx.stroke();
 
     }
+
+    if (getCommand() === 'text' && getArgs().length >= 3) {
+        var temp = getArgs();
+        var string = "";
+        for(var i = 2; i<temp.length;i++) {
+        	string += temp[i];
+        }
+        ctx.beginPath();
+        ctx.font = "40px Arial";
+        ctx.fillText(""+string,temp[0],temp[1]);
+        ctx.stroke();
+
+    }
+
+
+
+
+
 
 
 });
