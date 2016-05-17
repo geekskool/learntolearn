@@ -18,10 +18,12 @@ Project Structure:
 	> index.html		
 
 Input
+
 Basic functions from HTML5 Canvas API to draw and manipulate objects on screen. The user inputs one of the functionalities provided along with the required arguments. The required arguments include the coordinates and the dimensions of the shape to be drawn.
 
 
 Functionalities provided
+
 * Rectangle
 * Circle
 * Triangle
