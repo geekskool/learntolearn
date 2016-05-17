@@ -1,0 +1,10 @@
+hr.style5 {
+    background-color: #fff;
+    border-top: 2px dashed red;
+}
+
+.text {
+    height: 200px;
+    width: 1800px;
+    /*margin-left: 100px;*/
+}
