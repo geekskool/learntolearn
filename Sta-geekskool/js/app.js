@@ -1,11 +1,12 @@
 var x = 20;
 var y = 20;
+var PI = 3.14;
 var texdata;
 var commandArr = [];
 var argsArr = [];
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-var PI = 3.14;
+ 
 
 
 
@@ -38,6 +39,13 @@ function getArgs() {
 
 }
 
+function fillColor(ctx,color){
+    
+    ctx.fillStyle = color;
+    ctx.fill();
+    ctx.closePath();
+}
+
 $("button").click(function() {
 
     // console.log("user input command   " + command);
@@ -48,10 +56,16 @@ $("button").click(function() {
     console.log(getCommand());
     console.log(getArgs());
 
-    if (getCommand() === 'rectangle' && getArgs().length === 4) {
-
+    if (getCommand() === 'rectangle' && getArgs().length === 5) {
+       
         var temp = getArgs();
+        ctx.beginPath();
         ctx.rect(temp[0], temp[1], temp[2], temp[3]);
+        
+        if (typeof temp[4] === "string") {
+            fillColor(ctx,temp[4]);
+        }
+
         ctx.stroke();
 
 
@@ -60,7 +74,7 @@ $("button").click(function() {
 
         var temp = getArgs();
         ctx.beginPath();
-        ctx.arc(temp[0], temp[1], temp[2], temp[3], temp[4] * PI);
+        ctx.arc(temp[0], temp[1], temp[2], temp[3], temp[4] * 3.14);
         ctx.stroke();
 
     }
@@ -76,52 +90,25 @@ $("button").click(function() {
 
     }
 
-    if (getCommand() === 'rotate' && getArgs().length === 1) {
-        var temp = getArgs();
-        ctx.rotate(temp[0]);
-    }
-    if (getCommand() === 'translate' && getArgs().length === 2) {
-        var temp = getArgs();
-        ctx.translate(temp[0], temp[1]);
-    }
-    if (getCommand() === 'transform' && getArgs().length === 6) {
-        var temp = getArgs();
-        ctx.transform(temp[0], temp[1], temp[2], temp[3], temp[4], temp[5]);
-    }
-    if (getCommand() === 'scale' && getArgs().length === 2) {
-        var temp = getArgs();
-        ctx.scale(temp[0], temp[1]);
-    }
-    if (getCommand() === 'clearRect' && getArgs().length === 4) {
-        var temp = getArgs();
-        ctx.clearRect(temp[0], temp[1], temp[2], temp[3]);
-    }
-    if (getCommand() === 'fillRect' && getArgs().length === 4) {
-        var temp = getArgs();
-        ctx.clearRect(temp[0], temp[1], temp[2], temp[3]);
-    }
-    if (getCommand() === 'pie' && getArgs().length === 5) {
-
+    if (getCommand() === 'line' && getArgs().length === 2) {
         var temp = getArgs();
         ctx.beginPath();
-        ctx.moveTo(temp[0], temp[1]);
-        ctx.arc(temp[0], temp[1], temp[2], temp[3], temp[4] * PI);
-        ctx.lineTo(temp[0], temp[1]);
-        // ctx.lineTo(temp[1],temp[]);
+        ctx.moveTo(0, 0);
+        ctx.lineTo(300, 150);
         ctx.stroke();
 
     }
 
-    if (getCommand() === 'text' && getArgs().length >= 3) {
+    if (getCommand() === 'ellipse' && getArgs().length === 7) {
         var temp = getArgs();
-        var string = "";
-        for (var i = 2; i < temp.length; i++) {
-            string += temp[i];
-        }
         ctx.beginPath();
-        ctx.font = "40px Arial";
-        ctx.fillText("" + string, temp[0], temp[1]);
+        ctx.ellipse(temp[0], temp[1], temp[2], temp[3], temp[4] * (PI / 180), temp[5], temp[6] * PI);
         ctx.stroke();
 
     }
+
+
+
+
+
 });
