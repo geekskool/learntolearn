@@ -64,7 +64,14 @@ function text(x, y, const char* text, color);
 
 // Set the background color through RGB values from 0..255. It is used to clear the screen before each draw() call.
 
-// The framework also includes the functions to play with the drawing. For instance- rotate, transform, transfer and scale.
+// Fills the color in the figures as per the user wants.
+function fill(str);
+
+// On mouse click gives the coordinates of a particular point when you click the screen somewhere. 
+function onClick(event);
+
+// Shows the frame per second
+function showfps();
 
 ```
 
