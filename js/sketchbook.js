@@ -36,10 +36,10 @@ function triangle(x, y) {
     
 }
 
-function line(x, y, z) {
+function line(x1, y1, x2, y2) {
     ctx.beginPath();
-    ctx.moveTo(x, y);
-    ctx.lineTo(z, y);
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x2, y2);
     ctx.closePath();
     ctx.stroke();
 }
@@ -71,8 +71,10 @@ function pixel(x, y, color) {
     ctx.strokeStyle = 'black';
 }
 
-function text(str, x, y) {
-    ctx.font = "30px Arial";
+function text(str, x, y, size) {
+
+    var string = size+"px Arial"
+    ctx.font = string;
     ctx.fillText(str, x, y);
 }
 
