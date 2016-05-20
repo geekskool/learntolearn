@@ -10,13 +10,10 @@ This will run on all linux/ Mac/ Windows based operating systems. The framework 
 
 ##Get Started
 
-The most important file is named project.js. This is where the student puts his/her solution. If all of it runs perfect then you can start changing our setup and draw methods. 
+The most important file is named project.js. This is where the student puts his/her solution. If all of it runs perfect then you can start drawing. 
 Something like this-
 
 ```
-function setup() {
-  // do initialization here
-}
 
 function draw() {
   // this will be repeated on and on and on...
