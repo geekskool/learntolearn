@@ -76,7 +76,7 @@ function showfps();
 ```
 
 ##Examples 
-
+## 1. Android bot
 ```
 // function to draw the android bot logo on the canvas
 function draw(){
@@ -145,6 +145,8 @@ function draw(){
 ```
 ![](http://i.imgur.com/bVYx278.jpg?1)
 
+##2. Geekskool logo
+
 ```
 // function to draw the geekskool logo on the canvas
 function draw(){
@@ -177,7 +179,7 @@ function draw(){
 ```
 ![](http://i.imgur.com/evHvmiR.jpg?1)
 
-
+## 3. Ubuntu logo
 ```
 // function to draw the ubuntu logo on the canvas
 function draw(){
@@ -230,6 +232,7 @@ function draw(){
 
 ![](http://i.imgur.com/CIYCqiD.png?1)
 
+##4. Batman logo
 ```
 // function to draw the batman logo on the canvas
 function draw(){
