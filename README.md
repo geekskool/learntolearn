@@ -148,8 +148,7 @@ function draw(){
 // function to draw the geekskool logo on the canvas
 function draw(){
 	
-	function draw(){
-	ctx.strokeStyle= "orange"
+	ctx.strokeStyle= "orange";
 	for (var i = 0; i <= 100; i++){
 		line(350+i,100,100+i,350)
 	}
